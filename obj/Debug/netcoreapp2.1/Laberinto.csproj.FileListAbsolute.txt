@@ -1,0 +1,11 @@
+/home/alan/Documentos/Escuela/Analisis/Laberinto/bin/Debug/netcoreapp2.1/Laberinto.deps.json
+/home/alan/Documentos/Escuela/Analisis/Laberinto/bin/Debug/netcoreapp2.1/Laberinto.runtimeconfig.json
+/home/alan/Documentos/Escuela/Analisis/Laberinto/bin/Debug/netcoreapp2.1/Laberinto.runtimeconfig.dev.json
+/home/alan/Documentos/Escuela/Analisis/Laberinto/bin/Debug/netcoreapp2.1/Laberinto.dll
+/home/alan/Documentos/Escuela/Analisis/Laberinto/bin/Debug/netcoreapp2.1/Laberinto.pdb
+/home/alan/Documentos/Escuela/Analisis/Laberinto/obj/Debug/netcoreapp2.1/Laberinto.csprojAssemblyReference.cache
+/home/alan/Documentos/Escuela/Analisis/Laberinto/obj/Debug/netcoreapp2.1/Laberinto.csproj.CoreCompileInputs.cache
+/home/alan/Documentos/Escuela/Analisis/Laberinto/obj/Debug/netcoreapp2.1/Laberinto.AssemblyInfoInputs.cache
+/home/alan/Documentos/Escuela/Analisis/Laberinto/obj/Debug/netcoreapp2.1/Laberinto.AssemblyInfo.cs
+/home/alan/Documentos/Escuela/Analisis/Laberinto/obj/Debug/netcoreapp2.1/Laberinto.dll
+/home/alan/Documentos/Escuela/Analisis/Laberinto/obj/Debug/netcoreapp2.1/Laberinto.pdb
