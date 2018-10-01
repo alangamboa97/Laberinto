@@ -8,47 +8,111 @@ namespace Laberinto
         
         static void Main(string[] args)
         {
-            int [,] laberinto = new int [5,6];
-            int filas;
-            int columnas;
-            char a, b, d, i;
-            a= 'a';
-            char movimiento;
-            int posicion_inicial;
-            int posicion_actual;
-            int posicion_anterior;
             
-
-            for(filas =0; filas<5;filas++){
-                for(columnas=0; columnas<6; columnas ++){
-                    laberinto [filas,columnas] =0;
-                    laberinto[0,1] =2;
-                    Console.Write("{0}\t",laberinto[filas,columnas]);
-                }
-                
-
-            }
-            
-           
-           Console.WriteLine("Ingresa tu movimiento");
-           movimiento = char.Parse(Console.ReadLine());
-
-          if(movimiento == a){
-              laberinto[0,1]=0;
-              laberinto[1,1] =2;
-              }
-        if(movimiento == a){
-            laberinto[1,1] =0;
-            laberinto[2,1]=2;
-        }
-          for(filas =0; filas<5;filas++){
-                for(columnas=0; columnas<6; columnas ++){
-                    
-                    Console.Write("{0}\t",laberinto[filas,columnas]);
+            char dezplazamiento;
+            int usuario,x=0,y=1;
+            int[,] matriz =
+            {
+                {1,0,1,1,0,0 },
+                {1,0,1,1,0,1},
+                {1,0,1,1,0,1},
+                {1,0,0,0,0,1},
+                {1,1,0,1,1,1}
+            };
+            Console.WriteLine("INTRUCCIONES");
+            Console.WriteLine("Tecla 'a' dezplaza un espacio arriba");
+            Console.WriteLine("Tecla 'b' dezplaza un espacio abajo");
+            Console.WriteLine("Tecla 'd' dezplaza un espacio a la derecha");
+            Console.WriteLine("Tecla 'i' dezplaza un espacio a la izquierda");
+            Console.WriteLine("El jugador es el numero 2");
+            Console.WriteLine("Para ganar llegue al punto (0,5)");
+            Console.ReadKey();
+            Console.Clear();
+            Console.WriteLine("MAPA");
+            for (int i = 0; i < 5; i++)
+            {
+                for(int j = 0; j < 6; j++)
+                {
+                    Console.Write("{0}\t", matriz[i, j]);
                 }
                 Console.WriteLine();
-}
             }
+            Console.ReadKey();
+            matriz[x, y] = 2;
+            do
+            {
+                Console.Clear();
+                for (int i = 0; i < 5; i++)
+                {
+                    for (int j = 0; j < 6; j++)
+                    {
+                        Console.Write("{0}\t", matriz[i, j]);
+                    }
+                    Console.WriteLine();
+                }
+                Console.WriteLine("Ingrese direccion de dezplazamiento");
+                dezplazamiento = char.Parse(Console.ReadLine());
+                switch (dezplazamiento)
+                {
+                    case 'a':
+                        if (matriz[x-1, y] != 1 && x-1 >= 0)
+                        {
+                            matriz[x, y] = 0;
+                            x = x - 1;
+                            matriz[x, y] = 2;
+                        }
+                        else
+                        {
+                            Console.WriteLine("No se puede realizar el movimiento");
+                        }
+                        break;
+                    case 'b':
+                        if (matriz[x + 1, y] != 1 && x+1 <= 5)
+                        {
+                            matriz[x, y] = 0;
+                            x = x + 1;
+                            matriz[x, y] = 2;
+                        }
+                        else
+                        {
+                            Console.WriteLine("No se puede realizar el movimiento");
+                        }
+                        break;
+                    case 'd':
+                        if (matriz[x, y + 1] != 1)
+                        {
+                            matriz[x, y] = 0;
+                            y = y + 1;
+                            matriz[x, y] = 2;
+                        }
+                        else
+                        {
+                            Console.WriteLine("No se puede realizar el movimiento");
+                        }
+                        break;
+                    case 'i':
+                        if (matriz[x, y - 1] != 1)
+                        {
+                            matriz[x, y] = 0;
+                            y = y - 1;
+                            matriz[x, y] = 2;
+                        }
+                        else
+                        {
+                            Console.WriteLine("No se puede realizar el movimiento");
+                        }
+                        break;
+                }
+            } while (matriz[0, 5] != 2);
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 6; j++)
+                {
+                    Console.Write("{0}\t", matriz[i, j]);
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine("!Has Ganado¡");
                 
 
             
