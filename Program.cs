@@ -25,7 +25,7 @@ namespace Laberinto
                     laberinto[0,1] =2;
                     Console.Write("{0}\t",laberinto[filas,columnas]);
                 }
-                Console.WriteLine();
+                
 
             }
             
