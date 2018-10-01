@@ -25,7 +25,7 @@ namespace Laberinto
             Console.WriteLine("Tecla 'd' dezplaza un espacio a la derecha");
             Console.WriteLine("Tecla 'i' dezplaza un espacio a la izquierda");
             Console.WriteLine("El jugador es el numero 2");
-            Console.WriteLine("Para ganar llegue al punto (0,5)");
+            Console.WriteLine("Llega a la salida");
             Console.ReadKey();
             Console.Clear();
             Console.WriteLine("MAPA");
